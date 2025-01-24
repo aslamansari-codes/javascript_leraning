@@ -37,6 +37,12 @@ let stringNumber = String(intNumber)
 
 //console.log(typeof stringNumber);  // String type
 
+console.log(1+"2");  //12
+console.log("1"+2);   // 12
+console.log("1"+2+2);  // 122
+console.log(1+2+"2");   // but here will be 32
+
+
 
 
 
