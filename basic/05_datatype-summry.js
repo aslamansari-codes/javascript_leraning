@@ -27,6 +27,36 @@
    }
  */
 
+   // +++++++++++++++++++++++++++++++++++++++
+
+   // Stack (Primitive Type),  Heap (Non- Primitive)
+
+   /*let myName = "AslamAnsari"
+
+   let anotherName = myName
+   anotherName = "aslam776688"
+   console.log(anotherName);        // in Stack make duplicate copy of variable
+   console.log(myName);
+   
+   */
+
+   let userOne ={
+        Email: "aslam@google.com",
+        Upi: "xxxx@ybl"
+   }
+
+   let userTwo = userOne
+
+   
+   userTwo.Email = "aslamansari8@google.com"
+   console.log(userTwo.Email);
+   console.log(userOne.Email);
+   
+   
+   
+
+   
+
 
 
 
