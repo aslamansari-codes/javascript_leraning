@@ -21,6 +21,32 @@ const gameName = new String('Aslam Ansari')
 // console.log(anotherString);
 
 
+// const newStringOne = "     Aslam"
+// console.log(newStringOne);
+// console.log(newStringOne.trim());  // remove the blank space lines
+
+
+// ++++++++++++++++++++++++++
+
+const url = "https://aslam.com/aslam%20ansari"
+
+console.log(url.replace('%20','-'));  //https://aslam.com/aslam-ansari replace %20 to -
+
+// console.log(url.includes('ansari'));  // true
+// console.log(url.includes('raj'));  // false
+
+console.log(url.split('%'));
+
+
+
+
+
+
+
+
+
+
+
 
 
 
