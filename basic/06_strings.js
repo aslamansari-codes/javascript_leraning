@@ -28,14 +28,14 @@ const gameName = new String('Aslam Ansari')
 
 // ++++++++++++++++++++++++++
 
-const url = "https://aslam.com/aslam%20ansari"
+// const url = "https://aslam.com/aslam%20ansari"
 
-console.log(url.replace('%20','-'));  //https://aslam.com/aslam-ansari replace %20 to -
+// console.log(url.replace('%20','-'));  //https://aslam.com/aslam-ansari replace %20 to -
 
 // console.log(url.includes('ansari'));  // true
 // console.log(url.includes('raj'));  // false
 
-console.log(url.split('%'));
+// console.log(url.split('%'));
 
 
 
