@@ -18,13 +18,56 @@ const jsUser = {
 
 // how to access object 
 
-console.log(jsUser.Email);  // devmotihari845401@gmail.com
-// OR
-console.log(jsUser["Email"]);   // devmotihari845401@gmail.com
+// console.log(jsUser.Email);  // devmotihari845401@gmail.com
+// // OR
+// console.log(jsUser["Email"]);   // devmotihari845401@gmail.com
 
-// Symbol access in object 
+// // Symbol access in object 
 
-console.log(jsUser[mySym]);  // mykey1
+// console.log(jsUser[mySym]);  // mykey1
+
+// how to change value in object 
+
+// jsUser.Email= "aslamdev@chatgpt.com" 
+
+// console.log(jsUser.Email);  // aslamdev@chatgpt.com
+
+// Object.freeze(jsUser);  // freeze the object
+
+// jsUser.Email = "aslamdev@yahoo.com"
+
+// console.log(jsUser);
+/*
+output
+{
+  name: 'Aslam',
+  age: 20,
+  location: 'Motihari',
+  Email: 'aslamdev@chatgpt.com',
+  isLogged: false,
+  lastLoginDays: [ 'Sunday', 'Tuesday' ],
+  [Symbol(key1)]: 'mykey1'
+}
+*/
+
+jsUser.greeting = function(){
+    console.log(`Hello JS User ${this.age}`);
+}
+
+// console.log(jsUser.greeting);  // [Function (anonymous)]
+
+console.log(jsUser.greeting());
+
+
+
+
+
+
+
+ 
+
+
+
 
 
 
