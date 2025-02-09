@@ -99,7 +99,7 @@ console.log(check);  // Please enter a username
 */
 
 // ********** new approach *************
-
+/*
 function userLoggedIn(username = "robot"){
     if (!username) {
 
@@ -116,6 +116,67 @@ console.log(check);  // robot Just Logged In
 
 let check2 = userLoggedIn("Raja")  // replace the robot from Raja
 console.log(check2);  // Raja Just Logged In
+
+*/
+
+/*
+function calculateCartPrice(num1) {
+
+    return num1
+
+}
+
+// console.log(calculateCartPrice(5));  // 5
+console.log(calculateCartPrice(200,400,100)); // 200 -> this   is a problem
+
+*/
+// ********** rest operator ************
+/*
+function calculateCartPrice(...num1) {
+
+    return num1
+
+}
+console.log(calculateCartPrice(100,500,50,600));  // [ 100, 500, 50, 600 ]
+*/
+/*
+function calculateCartPrice(val1, val2, ...num1) {
+
+    return num1
+
+}
+console.log(calculateCartPrice(100,500,50,600));  // [ 50, 600 ]
+
+*/
+
+// ********** function and objects ***********
+/*
+const user = {
+    username: "aslam2308",
+    price: 199
+}
+
+function handleObject(anyObject){
+    console.log(`username is ${anyObject.username} and price is ${anyObject.price}`);  
+}
+
+handleObject(user)  // username is aslam2308 and price is 199
+*/
+
+const user = {
+    username: "aslam2308",
+    prices: 199              // here change price to prices then 
+}
+
+function handleObject(anyObject){
+    console.log(`username is ${anyObject.username} and price is ${anyObject.price}`);  
+}
+
+handleObject(user)   // username is aslam2308 and price is undefined
+
+
+
+
 
 
 
