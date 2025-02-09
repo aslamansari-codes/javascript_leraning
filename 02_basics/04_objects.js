@@ -61,16 +61,50 @@ const user =  [
 // console.log(user[1].email);  //  b@gmail.com
 // console.log();
 
-console.log(tinderUser);  // { id: '123abc', name: 'Sammy', isLoggedIn: false }
+// console.log(tinderUser);  // { id: '123abc', name: 'Sammy', isLoggedIn: false }
 
-console.log(Object.keys(tinderUser));  // [ 'id', 'name', 'isLoggedIn' ]
+// console.log(Object.keys(tinderUser));  // [ 'id', 'name', 'isLoggedIn' ]
 
-console.log(Object.values(tinderUser));  // [ '123abc', 'Sammy', false ]
+// console.log(Object.values(tinderUser));  // [ '123abc', 'Sammy', false ]
 
-console.log(Object.entries(tinderUser));  // [ [ 'id', '123abc' ], [ 'name', 'Sammy' ], [ 'isLoggedIn', false ] ]
+// console.log(Object.entries(tinderUser));  // [ [ 'id', '123abc' ], [ 'name', 'Sammy' ], [ 'isLoggedIn', false ] ]
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));  // true
-console.log(tinderUser.hasOwnProperty('isLogged'));   //false
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));  // true
+// console.log(tinderUser.hasOwnProperty('isLogged'));   //false
+
+// De-structure in object
+
+const course = {
+    courseName: " Js in Hindi",
+    price: 999,
+    courseInstructor: "Aslam"
+}
+
+console.log(course.courseInstructor);  // Aslam
+
+const {courseInstructor} = course
+// console.log(courseInstructor);   // Aslam
+ 
+const {courseInstructor: instructor} = course
+// console.log(instructor);    // Aslam
+
+// {
+//     "name": "Aslam Ansari",
+//     "courseName": "Js in Hindi",
+//     "price": 0
+
+// }
+
+[
+    {},
+    {},
+    {}
+]
+
+
+
+
+
 
 
 
