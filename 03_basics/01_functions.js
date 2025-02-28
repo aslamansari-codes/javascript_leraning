@@ -172,7 +172,31 @@ function handleObject(anyObject){
     console.log(`username is ${anyObject.username} and price is ${anyObject.price}`);  
 }
 
-handleObject(user)   // username is aslam2308 and price is undefined
+// handleObject(user)   // username is aslam2308 and price is undefined
+
+// ******* paas object ********
+
+handleObject({
+    username: "aman",
+    price: 399                  //username is aman and price is 399
+})
+
+//  *********** pass arrays *******
+
+const myNewArray = [200,700,150,150]
+
+ function returnSecondValue(getArray){
+    return getArray[1]
+
+ }
+
+//  console.log(returnSecondValue(myNewArray));  // 700
+
+console.log(returnSecondValue([100,500,350,800,900]));  // 500
+
+ 
+
+
 
 
 
