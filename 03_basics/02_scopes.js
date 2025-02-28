@@ -41,7 +41,7 @@ function one(num) {
 
 // console.log(anotherTwo(10)); not successfully executes
  
-const anotherTwo = function(num){
-    return num +1
-}
-
+// const anotherTwo = function(num){
+//     return num +1
+// }
+// this is basics scopes
