@@ -53,7 +53,7 @@ for (const key of map) {
 
 */
 
-for (const [key, value] of map) {
+for (const [key, value] of map) {   // use [] brackets for de-structure value
     // console.log(key, ":-", value);
     
 }
