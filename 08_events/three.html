@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork</title>
+</head>
+<body>
+    <h1>JS with chai in midnight</h1>
+    <button class="start">Start</button>
+    <button class="stop">Stop</button>
+</body>
+<script>
+   const h1 = document.querySelector('h1');
+   const startBtn = document.querySelector('.start')
+   const stopBtn = document.querySelector('.stop')
+   let check = null;
+
+   function showTime(){
+    const show  = new Date();
+    timeString = show.toLocaleString();
+    h1.innerHTML = `${timeString} JS learning Continue`;
+   }
+   function startClock(){
+    if(!check){
+        showTime();
+        check = setInterval(showTime,2000);
+    }
+   }
+
+   function stopClock(){
+    clearInterval(check);
+    check = null;
+   }
+
+   startBtn.addEventListener('click',startClock);
+   stopBtn.addEventListener('click',stopClock);
+
+</script>
+</html>
