@@ -7,14 +7,14 @@
     <title>Document</title>
     <style>
         .card-container {
-    width: 150px; /* adjust as needed */
-    padding: 0px;
-    background-color: #1fa4e6;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(168, 5, 5, 0.2);
-    text-align: center;
-}
-
+            width: 150px;
+            /* adjust as needed */
+            padding: 0px;
+            background-color: #1fa4e6;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(168, 5, 5, 0.2);
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -31,37 +31,37 @@
     4 DONE The operation is complete. -->
 </body>
 <script>
-    const requestUrl = 'https://api.github.com/users/aslamansari-codes'
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', requestUrl)
-    xhr.onreadystatechange = function () {
-        const data = JSON.parse(this.responseText)
-        /* console.log(xhr.readyState);
-         if (xhr.readyState === 4) {
-             console.log(data);
-             console.log(data.followers);
-         }*/
+    (() => {
+        const requestUrl = 'https://api.github.com/users/aslamansari-codes'
+        const http = new XMLHttpRequest();
+        http.open('GET', requestUrl)
+        http.onreadystatechange = function () {
+            const data = JSON.parse(this.responseText)
+            /* console.log(http.readyState);
+             if (http.readyState === 4) {
+                 console.log(data);
+                 console.log(data.followers);
+             }*/
+            
 
-        
-            const card =  document.getElementById('card')
+            if (http.readyState === XMLHttpRequest.DONE) {
+                const img = document.createElement('img');
+                img.src = data.avatar_url;
+                img.alt = 'Image';
+                img.style.width = '100%';
+                img.style.borderRadius = '12px';
+                const card = document.getElementById('card')
+                card.appendChild(img);
+            }
+            const followers = document.getElementById('followers')
+            followers.innerHTML = `Total followers :- ${data.followers}`
 
-        if (card.querySelector('img') === null) {
-            const img = document.createElement('img');
-            img.src = data.avatar_url;
-            img.alt = 'Sample Image';
-            img.style.width = '100%';
-            img.style.borderRadius = '12px';
-            card.appendChild(img);
+
         }
-        const followers = document.getElementById('followers')
-        followers.innerHTML = `Total followers :- ${data.followers}`
+        http.send();
 
 
-    }
-    xhr.send();
-
-
-
+    })()
 </script>
 
 </html>
