@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card-container {
+    width: 150px; /* adjust as needed */
+    padding: 0px;
+    background-color: #1fa4e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(168, 5, 5, 0.2);
+    text-align: center;
+}
+
+    </style>
+</head>
+
+<body style="background-color: #212121; color: #ffff;">
+    <div id="card" class="card-container">
+
+    </div>
+    <span id="followers"></span>
+
+    <!-- 0 UNSENT Client has been created. open() not called yet.
+    1 OPENED open() has been called.
+    2 HEADERS_RECEIVED send() has been called, and headers and status are available.
+    3 LOADING Downloading; responseText holds partial data.
+    4 DONE The operation is complete. -->
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/aslamansari-codes'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function () {
+        const data = JSON.parse(this.responseText)
+        /* console.log(xhr.readyState);
+         if (xhr.readyState === 4) {
+             console.log(data);
+             console.log(data.followers);
+         }*/
+
+        
+            const card =  document.getElementById('card')
+
+        if (card.querySelector('img') === null) {
+            const img = document.createElement('img');
+            img.src = data.avatar_url;
+            img.alt = 'Sample Image';
+            img.style.width = '100%';
+            img.style.borderRadius = '12px';
+            card.appendChild(img);
+        }
+        const followers = document.getElementById('followers')
+        followers.innerHTML = `Total followers :- ${data.followers}`
+
+
+    }
+    xhr.send();
+
+
+
+</script>
+
+</html>
