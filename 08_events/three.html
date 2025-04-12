@@ -28,13 +28,18 @@
     }
    }
 
-   function stopClock(){
+   
+
+   startBtn.addEventListener('click',function(){
+        if(!check){
+        showTime();
+        check = setInterval(showTime,2000);
+    }
+   });
+   stopBtn.addEventListener('click',function(){
     clearInterval(check);
     check = null;
-   }
-
-   startBtn.addEventListener('click',startClock);
-   stopBtn.addEventListener('click',stopClock);
+   });
 
 </script>
 </html>
