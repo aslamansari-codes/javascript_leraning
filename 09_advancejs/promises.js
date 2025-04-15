@@ -89,7 +89,7 @@ consumePromiseFive()
 
 //getAllUsers()
 
-fetch('https://api.github.com/users/hiteshchoudhary')
+fetch('https://api.github.com/users/aslamansari-codes')
 .then((response) => {
     return response.json()
 })
@@ -99,4 +99,3 @@ fetch('https://api.github.com/users/hiteshchoudhary')
 .catch((error) => console.log(error))
 
 // promise.all
-// yes this is also available, kuch reading aap b kro.
